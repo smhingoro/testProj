@@ -1,0 +1,160 @@
+<-----    Grocery Items ------------->
+
+
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- item 1 -->
+            <RelativeLayout
+                android:id="@+id/OilandGhee"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/kausar_oil">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cocking Oil and Ghee"
+                    android:textSize="18sp"
+                    android:layout_marginTop="90dp"
+                />
+
+
+            </RelativeLayout>
+            <!-- item 2 -->
+            <RelativeLayout
+            android:id="@+id/SpicesSaltAndSugar"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/national_masale">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spices, Salt and Sugar"
+                android:textSize="18sp"
+                android:layout_marginTop="90dp"
+                tools:ignore="HardcodedText" />
+
+
+        </RelativeLayout>
+            <!-- item 3 -->
+            <RelativeLayout
+                android:id="@+id/PicklesAndSauces"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/pickle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pickles, Sauces and Olives"
+                    android:textSize="18sp"
+                    android:layout_marginTop="90dp"
+                    />
+
+
+            </RelativeLayout>
+            <!-- item 4 -->
+            <RelativeLayout
+                android:id="@+id/JamAndHoney"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/jams">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jam, Honey and Spread"
+                    android:textSize="18sp"
+                    android:layout_marginTop="90dp"
+                    />
+
+
+            </RelativeLayout>
+            <!-- item 5 -->
+            <RelativeLayout
+                android:id="@+id/RiceAndFlour"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/aashirvaad_head">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pulses, Rice and Flour"
+                    android:textSize="18sp"
+                    android:layout_marginTop="90dp"
+                    />
+
+
+            </RelativeLayout>
+            <!-- item 6 -->
+            <RelativeLayout
+                android:id="@+id/BakingAndDesserts"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/deserts_custards_jellies">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baking and Desserts"
+                    android:textSize="18sp"
+                    android:layout_marginTop="90dp"
+                    />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Java Code of Oil and Ghe Activity
+
+
+
+
+
+
+        add = (Button)findViewById(R.id.add1);
+        delete = (Button)findViewById(R.id.delete1);
+        text = (TextView)findViewById(R.id.count1);
+
+        //Add item to cart
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count++;
+                text.setText(Integer.toString(count));
+            }
+        });
+
+        //Delete item from cart
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(count > 0){
+                    count--;
+                    text.setText(Integer.toString(count));
+                }
+            }
+        });
